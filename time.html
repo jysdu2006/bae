@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+	<body>
+		<button id="gettime">gettime</button>
+		<div class="content"></div><br/><br/>
+		<div>
+			用户名<input type="text" id="usrname"><br/><br/>
+			密&nbsp码&nbsp<input type="password" id="passwd"><br/><br/>
+			<button id="submit">提交</button>
+		</div>
+			<form action="test.php" method="post">
+			Name: <input type="text" name="fname">
+			Age: <input type="text" name="age">
+			<input type="submit">
+			</form>
+		<script>
+			$("#gettime").click(function(){
+				$.get("time.php",function(data){
+					$(".content").html("服务器时间是:"+data);
+				});
+			});
+			$("#submit").click(function(){
+				alert("name:"+$("#usrname").val()+" password:"+$("#passwd").val());
+				alert("测试能否到达1");
+				var result=$.post("test.php",{name:$("#usrname").val(),passwd:$("#passwd").val()},function(data,status){alert(data);});
+				$.get("show.php",function(data){$(".content").html("测试时间："+data);});
+				//result.success(function(data){alert(data);});
+				//result.error(function(){alert("error");});
+				alert("测试能否到达2");
+			});
+		</script>
+	</body>
+</html>
