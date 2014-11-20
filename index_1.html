@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>匪窝，带你洒脱带你飞</title>
+		<meta charset="utf-8">
+		<script type='text/javascript' src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
+		<script src="http://cdn.gbtags.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<link href="css/mainPage.css" rel="stylesheet">
+		<script src="js/mainPage.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<!--导航栏在此-->
+		<div class="navbar navbar-default container-fluid">
+		    <!--空出一栏-->
+			<div class="col-md-1"></div>
+			<!--logo-->
+			<div class="col-md-3">
+				<a class="weblog" href="index.html" data-toggle="tooltip" data-placement="bottom" title="带你洒脱带你飞"><img src="img/logo.jpg" id="logopic"><img src="img/name.jpg" id="picname"></a>
+			</div>
+
+			<!--一些主要内容-->
+			<div class="col-md-2">
+				<ul class="nav nav-bar">
+					<li class="dropdown">
+						<a href="" data-toggle="dropdown" class="dropdown-toggle">1000人相关<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href=""><span class="glyphicon glyphicon-hand-right"></span><b> <i>365</i>  好友</b></a></li>
+							<li class="divider"></li>
+							<li><a href=""><span class="glyphicon glyphicon-hand-left"></span><b> <i>600</i>  同命人</b></a></li>
+							<li class="divider"></li>
+							<li><a href=""><span class="glyphicon glyphicon-thumbs-up"></span><b> <i>35</i>  大拿</b></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-md-2">
+				<ul class="nav nav-bar">
+					<li class="dropdown">
+						<a href="" data-toggle="dropdown" class="dropdown-toggle">前方高能<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href=""><span class="glyphicon glyphicon-tower"></span><b> <i>N</i>条本行业干货</b></a></li>
+							<li class="divider"></li>
+							<li><a href=""><span class="glyphicon glyphicon-usd"></span><b> <i>N+1</i>条其他干货</b></a></li>
+							<li class="divider"></li>
+							<li><a href=""><span class="glyphicon glyphicon-heart-empty"></span><b> <i>N+2</i>条我关注的</b></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+			<!--登陆注册等联系信息-->
+			<div class="col-md-3">
+				<div class="userInfo pull-right">
+					<button class="btn btn-default" id="login" data-toggle="modal" data-target="#myModal">登录</button>
+					<button class="btn btn-default">注册</button></i><span class="seperator">&nbsp&nbsp&nbsp</span>
+					<i class="fa fa-qq" title="719644044"></i><span class="seperator">&nbsp&nbsp&nbsp</span>
+					<i class="fa fa-weixin" title="jinyingsdu"></i>
+				</div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+			</div>
+
+
+			<div class="col-md-1"></div>
+
+		</div>
+
+
+
+		<!--导航栏后面是内容提示-->
+		<div class="mainContent">
+			<div class="col-md-2"></div>
+
+			<!--一些推荐的内容 一个轮播内容框-->
+			<div class="col-md-4 recomm">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner" role="listbox">
+						<div class="item active"style="background:url(http://sdumicro.qiniudn.com/career1.jpg); background-size:cover;">
+							<img src="http://sdumicro.qiniudn.com/career1.jpg" alt="...">
+							<div class="carousel-caption"></div>
+						</div>
+						<div class="item" style="background:url(http://sdumicro.qiniudn.com/career2.jpg); background-size:cover;">
+							<img src="http://sdumicro.qiniudn.com/career2.jpg" alt="...">
+							<div class="carousel-caption"></div>
+						</div>
+					</div>
+
+					 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					 	<span class="glyphicon glyphicon-chevron-left"></span>
+					 	<span class="sr-only">Previous</span>
+					 </a>
+					 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					 	<span class="glyphicon glyphicon-chevron-right"></span>
+					 	<span class="sr-only">Next</span>
+					 </a>
+
+
+
+				</div>
+			</div>
+
+
+
+			<!--记录相关知识、任务、行业、活动-->
+			<div class="col-md-4 relate">
+				<ul class="list-group">
+					<li class="list-group-item">心灵的旅行</li>
+					<li class="list-group-item">大千世界</li>
+					<li class="list-group-item">逆袭</li>
+					<li class="list-group-item">新技能</li>
+					<li class="list-group-item">私人订制</li>
+				</ul>
+
+			</div>
+
+			<div class="col-md-2"></div>
+
+
+
+		</div>
+
+
+		<!--画布  画一条横线-->
+		<canvas id="myCanvas" width="1000" height="50"></canvas>
+
+
+
+		<!--页面主题部分-->
+		<div class="container">
+		
+		<!--相关内容标签（我的那些事、我关心的、本行业大拿、江湖纷争、行业八卦）每个标签下用个双引号给出一句比较经典的话 "既然卒子已过河，那就勇往直前吧"-->
+		<div class="col-md-8">
+			<div class="navTip">
+				<ul class="nav nav-pills" role="tablist" id="Tip">
+					<li role="presentation" data-page="aboutMe" class="active shCont"><a href="#">我的那些事</a></li>
+					<li role="presentation" data-page="myCares" class="shCont"><a href="">剪不断 理还乱</a></li>
+					<li role="presentation" data-page="daNan" class="shCont"><a href="">那些传说</a></li>
+					<li role="presentation" data-page="jiangHu" class="shCont"><a href="">你的浆糊</a></li>
+					<li role="presentation" data-page="baGua" class="shCont"><a href="">扒一扒</a></li>
+					<li role="presentation" data-page="history" class="shCont"><a href="">历史长河</a></li>
+				</ul>
+			</div>
+
+			<!--画布-->
+			<canvas id="secondCanvas" width="1200" height="20"></canvas>
+			<!--内容展示-->
+			<div class="container">
+				<div class="content"></div>
+			</div>
+		</div>
+
+		<!--边栏-->
+		<aside>
+				<h3>一些有意思的事情</h3>
+		</aside>
+		<div class="col-md-2"></div>
+		
+		</div>
+
+		
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+	</body>
+
+</html>

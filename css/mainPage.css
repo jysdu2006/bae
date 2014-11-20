@@ -1,0 +1,54 @@
+@import url('http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.min.css');
+@import url('http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap-theme.min.css');
+@import url('http://cdn.gbtags.com/font-awesome/4.1.0/css/font-awesome.min.css');
+
+.modal.h4{
+    text-align: center;
+  }
+.modal-footer{
+    margin: auto;
+  }
+
+
+
+.weblog{
+	line-height: 10px;
+	height:15px;
+}
+
+#picname{
+	display: none;
+}
+
+
+.userInfo{
+	
+}
+
+.carousel{
+	height: 250px;
+	background-color: #000;
+}
+
+.carousel .item{
+	height: 250px;
+	background-color: #000;
+}
+
+.carousel img{
+	width: 100%;
+	height: 100%;
+}
+
+
+.list-group-item{
+	height: 50px;
+}
+
+.relate{
+	margin: auto;
+}
+
+.navTip{
+	margin: auto;
+}

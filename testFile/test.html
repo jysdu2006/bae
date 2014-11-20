@@ -1,0 +1,70 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<link href='http://cdn.gbtags.com/twitter-bootstrap/3.2.0/css/bootstrap.min.css' rel="stylesheet">
+<link href='http://cdn.gbtags.com/font-awesome/4.1.0/css/font-awesome.min.css' rel="stylesheet">
+<script type='text/javascript' src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script>
+<script src="http://cdn.gbtags.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<section>
+<button class="btn btn-default" id="cli">点击</button>
+
+<ul class="test">
+	<li><a data-page="aboutMe">关于我们</a></li>
+</ul>
+
+</section>
+
+<section>
+	<div class="col-md-3"></div>
+	<div class="col-md-6" id="content">
+		<i class="fa fa-quote-left"></i>既然卒已过河，那就只能勇往直前了<i class="fa fa-quote-right"></i>
+	</div>
+	<div class="col-md-3"></div>
+</section>
+
+<section>
+	<button class="btn btn-default" id="time" onclick="loadXMLDoc()">现在时间</button>
+	<p id="timep">一会显示时间</p>
+</section>
+
+<script>
+	$("#cli").click(function(){alert("abc");});
+	$(".test a").click(function(){
+		alert("bcd");
+		var page='http://sdumicro.qiniudn.com/'+$(this).data('page')+'.html';
+		alert(page);
+		$("#content").load(page);
+	});
+
+
+
+function loadXMLDoc()
+{
+	alert("1t");
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("timep").innerHTML=xmlhttp.responseText;
+    }
+}
+xmlhttp.open("GET","http://www.w3cschool.cc/try/ajax/demo_get.php",true);
+xmlhttp.send();
+}
+
+
+
+
+
+</script>
