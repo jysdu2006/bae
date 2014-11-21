@@ -6,7 +6,7 @@
 
 $(document).ready(function(){
 
-	$('.modal.fade').load('html/regester.html');
+	//$('.modal.fade').load('html/regester.html');
 
 	$("#logopic").hover(function(){
 		$("#picname").fadeIn("slow");
@@ -20,11 +20,6 @@ $(document).ready(function(){
 		$(this).css("background-color:#b0c4de");
 	},function(){
 		$(this).css("background-color:#ffffff");
-	});
-
-
-	$("#login").click(function(){
-		
 	});
 
 	$('.shCont').click(function(){
@@ -44,5 +39,11 @@ $(document).ready(function(){
 	ctx.lineTo(1100,10);
 	ctx.stroke();
 
-
+	$("#loginAction").click(function(){
+		$name=$("#username").val();
+		$passwd=$("#passwd").val();
+		$.post("test.php",{name:$name,passwd:$passwd},function(data,status){
+			alert(data);
+		});
+	});
 });

@@ -7,7 +7,7 @@ $port = 4050;
 $user = 'jkBDSEPVkGXNd3QkpZGtwxdO';
 $pwd = 'miMNMvipX4Bd2baf6foZwpchRhD4RtWR';
 
-$link = @mysql_connect("{host}:{port}",$user,$pwd,true);
+$link = @mysql_connect("localhost","root","root",true);
 if(!$link) {
     die("Connect Server Failed: " . mysql_error());
 }
@@ -22,7 +22,7 @@ if(!mysql_select_db("userinfo",$link)) {
 $name=trim($_POST["name"]);
 $pass=$_POST["passwd"];
 
-$sql = "select password from userinfo where username='{$name}'";
+$sql = "select password from logininfo where username='{$name}'";
 
 
 $ret = mysql_query($sql, $link);
