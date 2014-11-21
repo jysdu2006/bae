@@ -12,10 +12,10 @@
         </div>
         <div class="input-group" style="margin:20px;">
           <span class="input-group-addon">&nbsp密&nbsp码&nbsp</span>
-          <input type="password" class="form-control" placeholder="Username" style="width:200px;">
+          <input type="password" class="form-control" placeholder="Password" style="width:200px;">
         </div>
       </div>
-      <div class="modal-footer" style="text-align:center;">
+      <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="loginAction">确定</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
       </div>
@@ -25,6 +25,6 @@
 <script type="text/javascript">
   $('#loginAction').click(function(){
     var $name=$('#username');
-    alert($name.html());
+    alert($name.val());
   });
 </script>

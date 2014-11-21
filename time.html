@@ -24,7 +24,7 @@
 			$("#submit").click(function(){
 				alert("name:"+$("#usrname").val()+" password:"+$("#passwd").val());
 				alert("测试能否到达1");
-				var result=$.post("test.php",{name:$("#usrname").val(),passwd:$("#passwd").val()},function(data,status){alert(data);});
+				var result=$.post("test.php",{name:$("#usrname").val(),passwd:$("#passwd").val()},function(data,status){alert("data is "+data+" status is "+satus);});
 				$.get("show.php",function(data){$(".content").html("测试时间："+data);});
 				//result.success(function(data){alert(data);});
 				//result.error(function(){alert("error");});
