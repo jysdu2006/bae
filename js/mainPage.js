@@ -4,6 +4,9 @@
 		});}
 	setInterval("time()",1000);
 
+
+	
+
 $(document).ready(function(){
 
 	//$('.modal.fade').load('html/regester.html');
@@ -25,7 +28,6 @@ $(document).ready(function(){
 	$('.shCont').click(function(){
 		//var page='../../html/'+$(this).data('page')+'.html';
 		var page='html/'+$(this).data('page')+'.html';
-		alert(page);
 		$('.content').load(page);
 	});
 
@@ -43,7 +45,46 @@ $(document).ready(function(){
 		$name=$("#username").val();
 		$passwd=$("#passwd").val();
 		$.post("test.php",{name:$name,passwd:$passwd},function(data,status){
-			alert(data);
+			if(data=='登录成功'){
+				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
+				$("#login").fadeOut("slow");
+				$("#reges").fadeOut("slow");
+			}
 		});
+	});
+
+	$("#regesAction").click(function(){
+		$name=$("#username").val();
+		$passwd=$("#passwd").val();
+		$passwdB=$("#passwdB").val();
+		if($passwd!=$passwdB){
+			alert("输入的两个密码不一致，重新输入！");
+			$("passwdB").val()="";
+		}
+		else{
+			$.post("test1.php",{name:$name,passwd:$passwd},function(data,status){
+			if(data=='注册成功'){
+				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
+				$("#login").fadeOut("slow");
+				$("#reges").fadeOut("slow");
+			}
+			else{
+				alert("用户已存在，请重新输入！");
+			}
+		});
+		}
+	});
+
+
+	$("#login").click(function(){
+		$("#inputagain").addClass("hidden");
+		$("#regesAction").addClass("hidden");
+		$("#loginAction").removeClass("hidden");
+	});
+
+	$("#reges").click(function(){
+		$("#inputagain").removeClass("hidden");
+		$("#regesAction").removeClass("hidden");
+		$("#loginAction").addClass("hidden");
 	});
 });

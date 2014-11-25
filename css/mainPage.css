@@ -64,3 +64,17 @@ aside{
 .modal-footer{
 	text-align:center;
 }
+
+
+#somelink,#timepanel{
+	border-style: dotted;
+	border-width: 1px;
+	margin: 20px;
+}
+
+#pinpai,#somelink,#timepanel{
+	margin: 20px;
+}
+#timearea{
+	margin: 30px;
+}

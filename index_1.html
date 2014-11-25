@@ -53,9 +53,9 @@
 
 			<!--登陆注册等联系信息-->
 			<div class="col-md-3">
-				<div class="userInfo pull-right">
+				<div class="userInfo pull-right" id="aboutuser">
 					<button class="btn btn-default" id="login" data-toggle="modal" data-target="#myModal">登录</button>
-					<button class="btn btn-default">注册</button></i><span class="seperator">&nbsp&nbsp&nbsp</span>
+					<button class="btn btn-default" id="reges" data-toggle="modal" data-target="#myModal">注册</button></i><span class="seperator">&nbsp&nbsp&nbsp</span>
 					<i class="fa fa-qq" title="719644044"></i><span class="seperator">&nbsp&nbsp&nbsp</span>
 					<i class="fa fa-weixin" title="jinyingsdu"></i>
 				</div>
@@ -73,11 +73,16 @@
         						</div>
         						<div class="input-group" style="margin:20px;">
           							<span class="input-group-addon">&nbsp密&nbsp码&nbsp</span>
-          							<input type="password" class="form-control" placeholder="Password"  id="passwd"style="width:200px;">
+          							<input type="password" class="form-control" placeholder="Password"  id="passwd" style="width:200px;">
+        						</div>
+        						<div class="input-group hidden" id="inputagain" style="margin:20px;">
+          							<span class="input-group-addon">重复密码</span>
+          							<input type="password" class="form-control" placeholder="Password"  id="passwdB" style="width:200px;">
         						</div>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-primary" id="loginAction">确定</button>
+        						<button type="button" class="btn btn-primary" id="regesAction">注册</button>
         						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
       						</div>
     					</div><!-- /.modal-content -->
@@ -159,6 +164,7 @@
 		<div class="container">
 		
 		<!--相关内容标签（我的那些事、我关心的、本行业大拿、江湖纷争、行业八卦）每个标签下用个双引号给出一句比较经典的话 "既然卒子已过河，那就勇往直前吧"-->
+
 		<div class="col-md-8">
 			<div class="navTip">
 				<ul class="nav nav-pills" role="tablist" id="Tip">
@@ -179,39 +185,60 @@
 				</div>
 			</div>
 		</div>
-
-		<!--边栏-->
-		<aside style="display:block;">
-				<h3><a href="#" id="intrest">一些有意思的事情</a></h3>
-				<h4>
-				</h4>
+		<aside class="col-md-4">
+			<div><h3><a href="#" id="intrest">一些有意思的事情</a></h3></div>
+			<div id="tuijian"></div>
 		</aside>
-		
-		
 		</div>
-
-		
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
 	</body>
 
+
+	<!--边栏-->
+	
+		
 	<footer>
-		<div class="col-md-8"></div>
-		<div class="col-md-4">
-			<div id="timearea"></div>
+		<div class="col-md-6" id="somelink">
+			<section class="col-md-4">
+				<ul style="display:block;">友情链接
+					<li><a href="http://www.bootcss.com/">bootstrap</a></li>
+					<li><a href="http://jquery.bootcss.com/">jquery</a></li>
+					<li><a href="http://www.36kr.com/">36氪</a></li>
+					<li><a href="www.baidu.com">百度</a></li>
+				</ul>
+			</section>
+			<section class="col-md-4">
+				<div id="pinpai">
+					<img src="/bae/img/logo.jpg">
+				</div>
+				<div><p>点亮漫漫职场路</p></div>
+			</section>
+			<section class="col-md-4">
+				<ul style="display:block;">炫酷活动
+					<li><a href="http://www.bootcss.com/">约么</a></li>
+					<li><a href="http://jquery.bootcss.com/">我拍二</a></li>
+					<li><a href="http://www.36kr.com/">你拍一</a></li>
+					<li><a href="www.baidu.com">哪凉快</a></li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-md-4" id="timepanel">
+			<section class="col-md-6"><div id="timearea"></div></section>
+			<section class="col-md-6">
+				<ul style="display:block;">历史上的今天
+					<li><a href="http://www.bootcss.com/">约么</a></li>
+					<li><a href="http://jquery.bootcss.com/">我拍二</a></li>
+					<li><a href="http://www.36kr.com/">你拍一</a></li>
+					<li><a href="www.baidu.com">哪凉快</a></li>
+				</ul>
+			</section>
 		</div>
 	</footer>
 
+
+<script type="text/javascript">
+	var page='html/aboutMe.html';
+	$('.content').load(page);
+	var page1="html/bookmark.html";
+	$('#tuijian').load(page1);
+</script>
 </html>

@@ -1,0 +1,35 @@
+<!-- 基础HTML代码 //-->
+<link rel="stylesheet" type="text/css" href="/bae/css/bookmark.css">
+<h1 class="CRPCandGBouquet"><i class="fa fa-bookmark"></i> 扁平风格手风琴式菜单效果</h1>
+
+<dl class="pull-right">
+	<dt> <i class="fa fa-users"></i> 关于我们</dt>
+	<dd> 极客标签 - 最棒的互动播放式课程平台 <br/>
+		
+	</dd>
+	<dt><i class="fa fa-map-marker"></i>  办公室地图</dt>
+	<dd> <i class="fa fa-bank"></i> 东直门外大街　</dd>
+	<dt><i class="fa fa-envelope"></i> 联系我们</dt>
+	<dd> <i class="fa fa-building"></i> 地址：北京朝阳区东三环 <br/>
+		
+		 <i class="fa fa-qq"></i> QQ：36181610 <br/>
+		
+		 <i class="fa fa-weixin"></i> 微信：gbtags <br/>
+		
+	</dd>
+</dl>
+
+<script type='text/javascript' src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$('dd').addClass('hidden');
+  
+  /* 当用户点击dt元素时候，和dt元素同一层次的dd元素显示，同时其它dd元素隐藏 */
+  $('dl').on('click', 'dt', function(){
+    //$(this)这里是dt元素的jQuery对象
+    var $this = $(this);
+    var $next=$this.next();
+    $next.slideDown(300);
+    //$next.slideDown(300);
+  });
+</script>
+
