@@ -49,6 +49,7 @@ $(document).ready(function(){
 				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
+				$('#myModal').modal({backdrop: false});
 			}
 		});
 	});
@@ -64,6 +65,7 @@ $(document).ready(function(){
 		else{
 			$.post("test1.php",{name:$name,passwd:$passwd},function(data,status){
 			if(data=='注册成功'){
+				$("#myModal").modal('hide');
 				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
