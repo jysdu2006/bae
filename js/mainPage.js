@@ -49,7 +49,7 @@ $(document).ready(function(){
 				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
-				$('#myModal').modal({backdrop: false});
+				$('#myModal').modal("hide");
 			}
 		});
 	});
@@ -69,6 +69,7 @@ $(document).ready(function(){
 				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
+				$('#myModal').modal("hide");
 			}
 			else{
 				alert("用户已存在，请重新输入！");
