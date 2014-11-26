@@ -77,13 +77,46 @@ aside{
 }
 */
 
-#pinpai,#somelink,#timepanel{
-	margin: 20px;
-}
-#timearea{
+
+
+
+
+
+.pagebottom{
+	position: relative;
 	margin: 30px;
+	padding-top: 20px;
+	background-color: #3E251A;
 }
 
+
+.pagebottom div{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.pagebottom div div{
+	width: 200px; /* 这里需要设置元素宽度 */
+  	height: 150px;
+  	color: #FFF;
+  	display: inline-block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+
+#weibopic{
+	width: 15%;
+	height: 15%;
+}
+
+#weixinpic{
+	width: 22%;
+	height: 22%;
+}
+
+
+.abc div{display: inline-block;}
 #search input:focus {
 			  outline:none;
 			}
