@@ -4,6 +4,8 @@
 
 
 
+
+
 .modal.h4{
     text-align: center;
   }
@@ -65,12 +67,13 @@ aside{
 	text-align:center;
 }
 
-
+/*
 #somelink,#timepanel{
 	border-style: dotted;
 	border-width: 1px;
 	margin: 20px;
 }
+*/
 
 #pinpai,#somelink,#timepanel{
 	margin: 20px;
