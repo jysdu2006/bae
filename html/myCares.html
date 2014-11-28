@@ -12,7 +12,7 @@
 
 
 <form><span id="ziti"></span><i class="fa fa-hand-o-right"/>
-	<select id="mycares" onchange="changestate()">
+	<select id="mycares" onchange="changestate(this.value)">
 		<option value="1">闪电播报</option>
 		<option value="2">连接前线</option>
 		<option value="3">事不关己</option>
@@ -22,10 +22,12 @@
 
 
 <script>
-	function changestate(){
-		alert("changed");
+	function changestate(value){
 		$.ajax({
+			type:'GET',
 			url:"getcont.php",
-		});
+			data:{index:value},
+			success:function(data,status){alert("status:"+status+" data is "+data);}
+		}).done(function(msg){alert(msg)});
 	}
 </script>
