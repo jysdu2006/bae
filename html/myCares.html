@@ -1,0 +1,31 @@
+<style type="text/css">
+	#mycares{
+	width: 200px;
+	background-color: #ff0;
+	height: 40px;	
+	border-radius: 15px;
+	}
+
+</style>
+
+
+
+
+<form><span id="ziti"></span><i class="fa fa-hand-o-right"/>
+	<select id="mycares" onchange="changestate()">
+		<option value="1">闪电播报</option>
+		<option value="2">连接前线</option>
+		<option value="3">事不关己</option>
+		<option value="4">荣誉之战</option>
+	</select><i class="fa fa-hand-o-left"/>
+</form>
+
+
+<script>
+	function changestate(){
+		alert("changed");
+		$.ajax({
+			url:"getcont.php",
+		});
+	}
+</script>
