@@ -3,7 +3,7 @@
 $index= $_GET["index"];
 
 
-echo  $index+"abc";
+echo  $index . "abc";
 
 
 

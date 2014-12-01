@@ -90,4 +90,11 @@ $(document).ready(function(){
 		$("#regesAction").removeClass("hidden");
 		$("#loginAction").addClass("hidden");
 	});
+
+
+
+	$('ul').on('click','li',function(){
+		$this=$(this);
+		$this.addClass('active').siblings('li').removeClass('active');
+	});
 });

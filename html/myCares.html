@@ -20,6 +20,7 @@
 	</select><i class="fa fa-hand-o-left"/>
 </form>
 
+<div id="conte"></div>
 
 <script>
 	function changestate(value){
@@ -27,7 +28,9 @@
 			type:'GET',
 			url:"getcont.php",
 			data:{index:value},
-			success:function(data,status){alert("status:"+status+" data is "+data);}
-		}).done(function(msg){alert(msg)});
+			success:function(data,status){
+				$("#conte").html(data);
+			}
+		});
 	}
 </script>
