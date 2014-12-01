@@ -26,7 +26,7 @@
 	function changestate(value){
 		$.ajax({
 			type:'GET',
-			url:"getcont.php",
+			url:"article.php",
 			data:{index:value},
 			success:function(data,status){
 				$("#conte").html(data);
