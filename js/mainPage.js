@@ -46,10 +46,16 @@ $(document).ready(function(){
 		$passwd=$("#passwd").val();
 		$.post("test.php",{name:$name,passwd:$passwd},function(data,status){
 			if(data=='登录成功'){
-				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
+				$("#reges").after('<a href="html/user.html" class="fa fa-user">'+$name+'</a>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
 				$('#myModal').modal("hide");
+				$('#passwd').val("");
+				$("#username").val("");
+			}
+			else{
+				alert(data);
+				$('#passwd').val("");
 			}
 		});
 	});
@@ -66,10 +72,13 @@ $(document).ready(function(){
 			$.post("test1.php",{name:$name,passwd:$passwd},function(data,status){
 			if(data=='注册成功'){
 				$("#myModal").modal('hide');
-				$("#reges").after('<i class="fa fa-user">'+$name+'</i>');
+				$("#reges").after('<a href="html/user.html" class="fa fa-user">'+$name+'</a>');
 				$("#login").fadeOut("slow");
 				$("#reges").fadeOut("slow");
 				$('#myModal').modal("hide");
+				$('#passwd').val("");
+				$("#username").val("");
+				$('#passwdB').val("");
 			}
 			else{
 				alert("用户已存在，请重新输入！");

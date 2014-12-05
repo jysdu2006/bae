@@ -7,7 +7,7 @@ $port = 4050;
 $user = 'jkBDSEPVkGXNd3QkpZGtwxdO';
 $pwd = 'miMNMvipX4Bd2baf6foZwpchRhD4RtWR';
 
-$link = @mysql_connect("localhost","root","root",true);
+$link = @mysql_connect("localhost","root","jinying",true);
 if(!$link) {
     die("Connect Server Failed: " . mysql_error());
 }
